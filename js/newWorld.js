@@ -27,7 +27,7 @@
 
     camera = new THREE.PerspectiveCamera(75, 1, 0.001, 10000);
     camera.target = new THREE.Vector3(0, 0, 0);
-    camera.position.set(50, 100, 0);
+    camera.position.set(50, 100, 350);
     //450
     scene.add(camera);
 
@@ -68,7 +68,7 @@
 
     var loader = new THREE.TextureLoader();
     loader.load( 'img/h5BEkjJNqKL3Djry6jNrxrvd.jpg', function ( texture ) {
-    var geometry = new THREE.SphereGeometry( 160, 160, 160 );
+    var geometry = new THREE.SphereGeometry( 180, 180, 180 );
     var material = new THREE.MeshBasicMaterial( { map: texture, overdraw: 0.5  } );
     material.side = THREE.DoubleSide;
     var mesh = new THREE.Mesh( geometry, material );
@@ -81,19 +81,7 @@
 //const domEvents	= new THREEx.DomEvents(camera, renderer.domElement)
 
 
-    var box;
-    var boxTexture = new THREE.ImageUtils.loadTexture( 'img/img3.png' );
-    boxTexture.wrapS = boxTexture.wrapT = THREE.RepeatWrapping; 
-    var boxMaterial = new THREE.MeshBasicMaterial( { map: boxTexture, side: THREE.DoubleSide, transparent:true } );
-    var boxGeometry = new THREE.PlaneGeometry( 60, 120);
-    box = new THREE.Mesh( boxGeometry, boxMaterial );
-    box.position.z=70;
-    box.position.y=100;
-    box.position.x = -90;
-    box.rotation.y = -10;
-    box.rotation.x = -70;
-    box.userData = { URL: "index2.html"};
-    scene.add(box);
+
 
     var box;
     var boxTexture = new THREE.ImageUtils.loadTexture( 'img/img2more.png' );
@@ -128,10 +116,59 @@
     var box_twoMaterial = new THREE.MeshBasicMaterial( { map: box_twoTexture, side: THREE.DoubleSide, transparent: true } );
     var box_twoGeometry = new THREE.PlaneGeometry( 60, 90 );
     box_two = new THREE.Mesh( box_twoGeometry, box_twoMaterial );
-    box_two.position.z=75;
+    box_two.position.z=65;
     box_two.position.y=-110;
     box_two.position.x = 65;
-    box_two.rotation.x = 34;
+    box_two.rotation.x = Math.PI/4;
+    box_two.rotation.y = Math.PI/3;
+    
+    //box_two.userData = { URL: "index2.html"};
+    scene.add(box_two);
+    
+
+    var box_two;
+    var box_twoTexture = new THREE.ImageUtils.loadTexture( 'img/img19.png' );
+    //box_twoTexture.wrapS = box_twoTexture.wrapT = THREE.RepeatWrapping; 
+    var box_twoMaterial = new THREE.MeshBasicMaterial( { map: box_twoTexture, side: THREE.DoubleSide, transparent: true } );
+    var box_twoGeometry = new THREE.PlaneGeometry( 60, 90 );
+    box_two = new THREE.Mesh( box_twoGeometry, box_twoMaterial );
+    box_two.position.z=45;
+    box_two.position.y=-60;
+    box_two.position.x = 115;
+    //box_two.rotation.x = Math.PI/4;
+    box_two.rotation.y = Math.PI/3;
+    
+    //box_two.userData = { URL: "index2.html"};
+    scene.add(box_two);
+    
+
+    var box_two;
+    var box_twoTexture = new THREE.ImageUtils.loadTexture( 'img/an0.png' );
+    //box_twoTexture.wrapS = box_twoTexture.wrapT = THREE.RepeatWrapping; 
+    var box_twoMaterial = new THREE.MeshBasicMaterial( { map: box_twoTexture, side: THREE.DoubleSide, transparent: true } );
+    var box_twoGeometry = new THREE.PlaneGeometry( 60, 90 );
+    box_two = new THREE.Mesh( box_twoGeometry, box_twoMaterial );
+    box_two.position.z=15;
+    box_two.position.y=50;
+    box_two.position.x = 120;
+    box_two.rotation.x = Math.PI/10;
+    box_two.rotation.y = Math.PI/2;
+    
+    //box_two.userData = { URL: "index2.html"};
+    scene.add(box_two);
+
+
+    var box_two;
+    var box_twoTexture = new THREE.ImageUtils.loadTexture( 'img/murakit.png' );
+    //box_twoTexture.wrapS = box_twoTexture.wrapT = THREE.RepeatWrapping; 
+    var box_twoMaterial = new THREE.MeshBasicMaterial( { map: box_twoTexture, side: THREE.DoubleSide, transparent: true } );
+    var box_twoGeometry = new THREE.PlaneGeometry( 60, 60 );
+    box_two = new THREE.Mesh( box_twoGeometry, box_twoMaterial );
+    box_two.position.z=30;
+    box_two.position.y=100;
+    box_two.position.x = 60;
+    box_two.rotation.x = 61.2;
+    //box_two.rotation.y = Math.PI/2;
     
     //box_two.userData = { URL: "index2.html"};
     scene.add(box_two);
@@ -164,22 +201,10 @@
     pa.userData = { URL: "index2.html"};
     scene.add(pa);
 
-    var anu2;
-    var anu2Texture = new THREE.ImageUtils.loadTexture( 'img/rocks1.png' );
-    //paTexture.wrapS = anu2Texture.wrapT = THREE.RepeatWrapping; 
-    var anu2Material = new THREE.MeshBasicMaterial( { map: anu2Texture, side: THREE.DoubleSide, transparent: true } );
-    var anu2Geometry = new THREE.PlaneGeometry( 90, 50 );
-    anu2 = new THREE.Mesh( anu2Geometry, anu2Material );
-    anu2.position.z=100;
-    anu2.position.y=-57;
-    anu2.position.x =-30;
-    anu2.rotation.y = -3.2;
-    anu2.rotation.x = 20;
-    anu2.userData = { URL: "index2.html"};
-    scene.add(anu2);
+
 
     var sphere;
-    var sphereGeometry = new THREE.SphereGeometry( 700, 700, 700 );
+    var sphereGeometry = new THREE.SphereGeometry( 450, 450, 450 );
     var sphereTexture = new THREE.ImageUtils.loadTexture( 'img/stars.png' );
     sphereTexture.wrapS = sphereTexture.wrapT = THREE.RepeatWrapping;
     sphereTexture.repeat.set( 15, 15 );
@@ -236,7 +261,7 @@
     var paTexture = new THREE.ImageUtils.loadTexture( 'img/img7.png' );
     paTexture.wrapS = paTexture.wrapT = THREE.RepeatWrapping; 
     var paMaterial = new THREE.MeshBasicMaterial( { map: paTexture, side: THREE.DoubleSide, transparent: true } );
-    var paGeometry = new THREE.PlaneGeometry( 60, 110 );
+    var paGeometry = new THREE.PlaneGeometry( 60, 180 );
     pa = new THREE.Mesh( paGeometry, paMaterial );
     pa.position.z=20;
     pa.position.y=-70;
@@ -244,6 +269,23 @@
    // pa.rotation.x = 6.8;
     pa.rotation.x = -30.9;
     pa.rotation.y = 20.8;
+    pa.userData = { URL: "index2.html"};
+    scene.add(pa);
+
+
+
+    var pa;
+    var paTexture = new THREE.ImageUtils.loadTexture( 'img/an00.png' );
+    paTexture.wrapS = paTexture.wrapT = THREE.RepeatWrapping; 
+    var paMaterial = new THREE.MeshBasicMaterial( { map: paTexture, side: THREE.DoubleSide, transparent: true } );
+    var paGeometry = new THREE.PlaneGeometry( 80, 100 );
+    pa = new THREE.Mesh( paGeometry, paMaterial );
+    pa.position.z=100;
+    pa.position.y=-15;
+    pa.position.x = -60;
+   // pa.rotation.x = 6.8;
+    //pa.rotation.x = 30.9;
+    pa.rotation.y = Math.PI/20;
     pa.userData = { URL: "index2.html"};
     scene.add(pa);
 
@@ -264,7 +306,7 @@
     pa.userData = { URL: "index2.html"};
     scene.add(pa);
 
-/*
+
     var pa;
     var paTexture = new THREE.ImageUtils.loadTexture( 'img/img9.png' );
     paTexture.wrapS = paTexture.wrapT = THREE.RepeatWrapping; 
@@ -277,7 +319,7 @@
     pa.rotation.Z = 20;
     pa.rotation.y = -20;
     pa.userData = { URL: "index2.html"};
-    scene.add(pa);*/
+    scene.add(pa);
 
 
     var pa;
@@ -305,6 +347,50 @@
     pa.rotation.y = 10.6;
     pa.userData = { URL: "index2.html"};
     scene.add(pa);
+
+    var pa;
+    var paTexture = new THREE.ImageUtils.loadTexture( 'img/murk222.png' );
+    paTexture.wrapS = paTexture.wrapT = THREE.RepeatWrapping; 
+    var paMaterial = new THREE.MeshBasicMaterial( { map: paTexture, side: THREE.DoubleSide, transparent: true } );
+    var paGeometry = new THREE.PlaneGeometry( 80, 70 );
+    pa = new THREE.Mesh( paGeometry, paMaterial );
+    pa.position.z=-98;
+    pa.position.y=50;
+    pa.position.x = -80;
+    
+    pa.userData = { URL: "index2.html"};
+    scene.add(pa);
+
+    var pa;
+    var paTexture = new THREE.ImageUtils.loadTexture( 'img/anal4.png' );
+    paTexture.wrapS = paTexture.wrapT = THREE.RepeatWrapping; 
+    var paMaterial = new THREE.MeshBasicMaterial( { map: paTexture, side: THREE.DoubleSide, transparent: true } );
+    var paGeometry = new THREE.PlaneGeometry( 140, 80 );
+    pa = new THREE.Mesh( paGeometry, paMaterial );
+    pa.position.z=180;
+    pa.position.y=50;
+    pa.position.x = -20;
+    pa.rotation.x = 31;
+
+    pa.userData = { URL: "index2.html"};
+    scene.add(pa);
+
+    var murq;
+    var murqTexture = new THREE.ImageUtils.loadTexture( 'img/murq2.png' );
+    murqTexture.wrapS = paTexture.wrapT = THREE.RepeatWrapping; 
+    var murqMaterial = new THREE.MeshBasicMaterial( { map: murqTexture, side: THREE.DoubleSide, transparent: true } );
+    var murqGeometry = new THREE.BoxGeometry( 30, 30, 30 );
+    murq = new THREE.Mesh( murqGeometry, murqMaterial );
+    murq.position.z=0;
+    murq.position.y=-360;
+    murq.position.x = 0;
+    murq.rotation.x = 31;
+ 
+
+    murq.userData = { URL: "index2.html"};
+    scene.add(murq);
+
+
 
 
 
@@ -334,7 +420,9 @@
 
 
    function animate() {
-    //box.rotation.x += 0.005;
+    
+    murq.rotation.x += 0.0005;
+    murq.rotation.y += 0.0005;
     requestAnimationFrame( animate );
     renderer.render( scene, camera );
     //controls.update();
